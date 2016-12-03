@@ -4,4 +4,4 @@ This repository explains how to run LEGv8 assembly code using the ARM DS-5 Commu
 
 The [wiki](https://bitbucket.org/HarryBroeders/legv8/wiki/Home) explains how to set up the development environment and how to run a very simple LEGv8 assembly program.
 
-Your corrections or suggestions are welcome. Just report an [issue](https://bitbucket.org/HR_ELEKTRO/cta02/issues?status=new&status=open) or mail me at [J.Z.M.Broeders@hr.nl](mailto:j.z.m.broeders@hr.nl).
+Your corrections or suggestions are welcome. Just report an [issue](https://bitbucket.org/HarryBroeders/legv8/issues?status=new&status=open) or mail me at [J.Z.M.Broeders@hr.nl](mailto:j.z.m.broeders@hr.nl).
