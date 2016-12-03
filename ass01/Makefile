@@ -1,12 +1,9 @@
-# Calendar Example Makefile
-#
-# Copyright (C) ARM Limited, 2009-2016. All rights reserved.
+# ASS01 Example Makefile
 #
 # This makefile is intended for use with GNU make
 # This example is intended to be built with Linaro bare-metal GCC
 
 TARGET=ass01.axf
-
 
 CC=aarch64-elf-gcc
 LD=aarch64-elf-gcc
@@ -46,4 +43,4 @@ test.o: test.S
 
 $(TARGET): main.o test.o
 # Link with specific base address to suit VE model memory layout
-	$(LD) --specs=aem-ve.specs -Wl,--build-id=none,-Map=linkmap.txt main.o test.o -o $@
+	$(LD) --specs=aem-ve.specs -Wl,--build-id=none main.o test.o -o $@
