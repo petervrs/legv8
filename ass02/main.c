@@ -29,3 +29,9 @@ int main(void)
 
     return 0;
 }
+
+/* Number of instructions:
+ * - Breakpoint at line 25: 12.244
+ * - Breakpoint at line 27: 14.738
+ * - Breakpoint at line 28: 14.756
+ */

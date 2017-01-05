@@ -11,7 +11,7 @@ loop:
     ADD X10, X10, X1        // Add argument b to answer
     ADD X9, X9, #1          // Increment i
 endloop:
-    ADD X0, X9, XZR         // Move answer to return register
+    ADD X0, X10, XZR         // Move answer to return register
     LDUR X9, [SP, #0]       // Restore saved register X9
     LDUR X10, [SP, #8]      // Restore saved register X10
     ADD SP, SP, #16         // Adjust stack pointer to pop 2 items
