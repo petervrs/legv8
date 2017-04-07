@@ -2,11 +2,30 @@
 
 #include <stdio.h>
 
-extern long long int test(long long int a, long long int b);
+extern unsigned long long int multiply(unsigned int a, unsigned int b);
 
 int main(void)
 {
-    long long int a = test(3, 5);
-    printf("Result of test(3, 5) = %ld\n", a);
-    return 0;
+	unsigned long long int m = multiply(0, 0);
+	    printf("Result of multiply(0, 0) = %ld\n", m);
+
+	    m = multiply(1, 0);
+		printf("Result of multiply(1, 0) = %ld\n", m);
+
+		m = multiply(0, 1);
+		printf("Result of multiply(0, 1) = %ld\n", m);
+
+		m = multiply(1, 1);
+		printf("Result of multiply(1, 1) = %ld\n", m);
+
+		m = multiply(1, 4294967295);
+		printf("Result of multiply(1, 4294967295) = %ld\n", m);
+
+		m = multiply(4294967295, 1);
+		printf("Result of multiply(4294967295, 1) = %ld\n", m);
+
+		m = multiply(4294967295, 4294967295);
+		printf("Result of multiply(4294967295, 4294967295) = %ld\n", m);
+
+	    return 0;
 }

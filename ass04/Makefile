@@ -1,9 +1,9 @@
-# ASS03 Example Makefile
+# ASS04 Example Makefile
 #
 # This makefile is intended for use with GNU make
 # This example is intended to be built with Linaro bare-metal GCC
 
-TARGET=ass03.axf
+TARGET=ass04.axf
 
 CC=aarch64-elf-gcc
 LD=aarch64-elf-gcc
@@ -37,10 +37,10 @@ main.o: main.c
 # Compile for best debug view (lowest optimization)
 	$(CC) -c -march=armv8-a -g -O0 $^ -o $@
 
-multiply.o: multiply.S
+test.o: test.S
 # Compile for best debug view (lowest optimization)
 	$(CC) -c -march=armv8-a -g -O0 $^ -o $@
 
-$(TARGET): main.o multiply.o
+$(TARGET): main.o test.o
 # Link with specific base address to suit VE model memory layout
-	$(LD) --specs=aem-ve.specs -Wl,--build-id=none main.o multiply.o -o $@
+	$(LD) --specs=aem-ve.specs -Wl,--build-id=none main.o test.o -o $@

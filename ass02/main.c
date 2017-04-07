@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-extern unsigned long long int multiply(long long int a, long long int b);
+extern unsigned long long int multiply(unsigned int a, unsigned int b);
 
 int main(void)
 {

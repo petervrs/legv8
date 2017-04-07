@@ -16,7 +16,7 @@
 					<folderInfo id="com.arm.toolchain.v6.2049397746.2144379090" name="/" resourcePath="">
 						<toolChain id="com.arm.eclipse.cdt.managedbuild.ds5.gcc.baremetal.toolchain.var.gcc-6.2.1-aarch64-elf.361287997" name="GCC 6.2.1 [aarch64-elf]" superClass="com.arm.eclipse.cdt.managedbuild.ds5.gcc.baremetal.toolchain.var.gcc-6.2.1-aarch64-elf">
 							<targetPlatform id="com.arm.eclipse.cdt.managedbuild.ds5.gcc.baremetal.toolchain.var.gcc-6.2.1-aarch64-elf.361287997.670616941" name=""/>
-							<builder id="com.arm.eclipse.cdt.managedbuild.ds5.gcc.baremetal.target.builder.787019361" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="com.arm.eclipse.cdt.managedbuild.ds5.gcc.baremetal.target.builder"/>
+							<builder id="com.arm.eclipse.cdt.managedbuild.ds5.gcc.baremetal.target.builder.787019361" managedBuildOn="false" name="Gnu Make Builder.Default" superClass="com.arm.eclipse.cdt.managedbuild.ds5.gcc.baremetal.target.builder"/>
 							<tool id="com.arm.eclipse.cdt.managedbuild.ds5.gcc.baremetal.tool.cpp.compiler.var.gcc-6.2.1-aarch64-elf.80912046" name="GCC C++ Compiler 6.2.1 [aarch64-elf]" superClass="com.arm.eclipse.cdt.managedbuild.ds5.gcc.baremetal.tool.cpp.compiler.var.gcc-6.2.1-aarch64-elf">
 								<inputType id="com.arm.eclipse.cdt.managedbuild.ds5.gcc.baremetal.tool.c.compiler.input.1155174825" superClass="com.arm.eclipse.cdt.managedbuild.ds5.gcc.baremetal.tool.c.compiler.input"/>
 								<inputType id="com.arm.eclipse.cdt.managedbuild.ds5.gcc.baremetal.tool.cpp.compiler.input.826873842" superClass="com.arm.eclipse.cdt.managedbuild.ds5.gcc.baremetal.tool.cpp.compiler.input"/>
