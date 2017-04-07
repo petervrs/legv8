@@ -1,9 +1,5 @@
 	.globl multiply
 multiply:
-    SUB SP, SP, #24         // Adjust stack pointer to make room for 3 items
-    STUR X11, [SP, #16]		// Push register X11 to stack
-    STUR X10, [SP, #8]      // Push register X10 to stack
-    STUR X9, [SP, #0]       // Push register X9 to stack
     MOV X9, #1				// Initialize variable i to 1
     MOV X10, XZR       		// Create variable answer and initialize to 0
 
@@ -23,8 +19,4 @@ endif:
 
 endloop:
     MOV X0, X10			    // Move answer to return register
-    LDUR X9, [SP, #0]       // Restore saved register X9
-    LDUR X10, [SP, #8]      // Restore saved register X10
-    LDUR X11, [SP, #16]		// Restore saved register X11
-    ADD SP, SP, #24         // Adjust stack pointer to pop 3 items
     BR X30                  // Branch and link to return address
