@@ -11,3 +11,8 @@ int main(void)
     printf("Result of power(3, 5) = %llu\n", a);
     return 0;
 }
+
+/* Number of instructions:
+ * - Breakpoint at line 10: 420
+ * - Breakpoint at line 11: 3357
+ */
