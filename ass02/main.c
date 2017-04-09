@@ -31,7 +31,6 @@ int main(void)
 }
 
 /* Number of instructions:
- * - Breakpoint at line 25: 12.244
- * - Breakpoint at line 27: 14.738
- * - Breakpoint at line 28: 14.756
+ * - Breakpoint at line 27: 21.474.851.347
+ * - Breakpoint at line 28: 42.949.687.838
  */
