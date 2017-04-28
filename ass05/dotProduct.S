@@ -14,14 +14,16 @@ loop:
 
 	// Calculate first address
 	MOV X0, X9				// Move i to first function argument
-	ADD X1, XZR, #8			// Initialize second argument register to 8
+	MOV X1, XZR				// Initialize second argument register to 0
+	ADD X1, X1, #8			// Add #8 to second argument register
 	BL multiply				// Branch and link to multiply function
 	LDUR X11, [SP, #16]		// Load address of first element of array a into X11
 	ADD X11, X11, X0		// Add calculated offset to X11
 
 	// Calculate second address
 	MOV X0, X9				// Move i to first function argument
-	ADD X1, XZR, #8			// Initialize second argument register to 8
+	MOV X1, XZR				// Initialize second argument register to 0
+	ADD X1, X1, #8			// Add #8 to second argument register
 	BL multiply				// Branch and link to multiply function
 	LDUR X12, [SP, #8]		// Load address of first element of array b into X12s
 	ADD X12, X12, X0		// Add calculated offset to X12
