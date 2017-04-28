@@ -19,10 +19,11 @@ loop:
 	LDUR X11, [SP, #16]		// Load address of first element of array a into X11
 	ADD X11, X11, X0		// Add calculated offset to X11
 
+	// Calculate second address
 	MOV X0, X9				// Move i to first function argument
 	ADD X1, XZR, #8			// Initialize second argument register to 8
 	BL multiply				// Branch and link to multiply function
-	LDUR X12, [SP, #8]		// Load address of first element of array b into X12
+	LDUR X12, [SP, #8]		// Load address of first element of array b into X12s
 	ADD X12, X12, X0		// Add calculated offset to X12
 
 	LDUR X0, [X11, #0]		// Load current element of array a into first argument register
@@ -30,13 +31,10 @@ loop:
 	BL multiply				// Branch and link to multiply function
 	ADD X10, X10, X0		// Add returned value to result
 
-	MOV X1, X10				// Move multiply value to second argument register
-	BL multiply				// Branch and link to the multiply function
-	MOV	X10, X0				// Move return value to first argument register
 	ADD	X9, X9, #1			// Increment i
 	B loop					// Branch back to start of loop
 
 endloop:
-	MOV X0, X10				// Move result of calculation to result register
-	LDUR X30, [SP, #16]		// Fetch return address from stack and store in return register
+	MOV X0, X10				// Move result of calculation to return register
+	LDUR X30, [SP, #24]		// Fetch return address from stack and store in return register
 	BR X30					// Branch and link to return address

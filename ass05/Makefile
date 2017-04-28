@@ -37,14 +37,14 @@ main.o: main.c
 # Compile for best debug view (lowest optimization)
 	$(CC) -c -march=armv8-a -g -O0 $^ -o $@
 
+multiply.o: multiply.S
+# Compile for best debug view (lowest optimization)
+	$(CC) -c -march=armv8-a -g -O0 $^ -o $@
+
 dotproduct.o: dotProduct.S
 # Compile for best debug view (lowest optimization)
 	$(CC) -c -march=armv8-a -g -O0 $^ -o $@
 
-power.o: power.S
-# Compile for best debug view (lowest optimization)
-	$(CC) -c -march=armv8-a -g -O0 $^ -o $@
-
-$(TARGET): main.o power.o dotproduct.o
+$(TARGET): main.o multiply.o dotproduct.o
 # Link with specific base address to suit VE model memory layout
-	$(LD) --specs=aem-ve.specs -Wl,--build-id=none main.o power.o dotproduct.o -o $@
+	$(LD) --specs=aem-ve.specs -Wl,--build-id=none main.o multiply.o dotproduct.o -o $@
