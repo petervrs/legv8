@@ -1,15 +1,20 @@
 /* main.c simple program to test assembler program */
 
 #include <stdio.h>
+#include <cstddef>
 
-extern long long int power (unsigned int n, unsigned int m);
-extern long long int multiply (unsigned int a, unsigned int b);
+extern long long int dotProduct (unsigned int a[], unsigned int b[], unsigned int n);
 
 int main(void)
 {
-    long long int a = power(3, 5);
-    printf("Result of power(3, 5) = %llu\n", a);
-    return 0;
+	unsigned int a[] = {1, 2, 3, 4, 5};
+	unsigned int b[] = {10 , 11, 12, 13, 14};
+
+	if (dotProduct (a, b, 5) == 190) {
+		printf ("OK\n");
+	} else {
+		printf (" Error \n");
+	}
 }
 
 /* Number of instructions:
