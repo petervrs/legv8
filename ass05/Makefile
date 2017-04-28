@@ -41,10 +41,10 @@ multiply.o: multiply.S
 # Compile for best debug view (lowest optimization)
 	$(CC) -c -march=armv8-a -g -O0 $^ -o $@
 
-dotProduct.o: dotProduct.S
+dotproduct.o: dotProduct.S
 # Compile for best debug view (lowest optimization)
 	$(CC) -c -march=armv8-a -g -O0 $^ -o $@
 
-$(TARGET): main.o dotProduct.o multiply.o
+$(TARGET): main.o dotproduct.o multiply.o
 # Link with specific base address to suit VE model memory layout
-	$(LD) --specs=aem-ve.specs -Wl,--build-id=none main.o dotProduct.o multiply.o -o $@
+	$(LD) --specs=aem-ve.specs -Wl,--build-id=none main.o dotproduct.o multiply.o -o $@

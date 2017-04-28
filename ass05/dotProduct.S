@@ -1,5 +1,5 @@
 	.globl dotProduct
-dotproduct:
+dotProduct:
 	STUR X30, [SP, #24]		// Push return address to stack
 	STUR X0, [SP, #16]		// Push first function argument (a) to stack
 	STUR X1, [SP, #8]		// Push second function argument (b) to stack
@@ -9,7 +9,7 @@ dotproduct:
 
 loop:
 	LDUR X10, [SP, #0]		// Fetch array length n from stack
-	CMP X9, X1				// Compare i and exponent
+	CMP X9, X2				// Compare i and n
 	B.HS endloop			// If i is greater than or equal to the exponent, branch to endloop
 
 	// Calculate first address
@@ -25,7 +25,7 @@ loop:
 	MOV X1, XZR				// Initialize second argument register to 0
 	ADD X1, X1, #8			// Add #8 to second argument register
 	BL multiply				// Branch and link to multiply function
-	LDUR X12, [SP, #8]		// Load address of first element of array b into X12s
+	LDUR X12, [SP, #8]		// Load address of first element of array b into X12
 	ADD X12, X12, X0		// Add calculated offset to X12
 
 	LDUR X0, [X11, #0]		// Load current element of array a into first argument register
